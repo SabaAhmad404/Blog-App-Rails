@@ -50,6 +50,5 @@ RSpec.describe Post, type: :model do
       comments = subject.recent_comments
       expect(comments.length).to be 5
     end
-
   end
 end
