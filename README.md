@@ -79,7 +79,7 @@ You will need the following:
 Clone this repository to your desired folder:
 
 ```
-  git clone https://github.com/belalgamal46/blog-app.git
+  https://github.com/SabaAhmad404/Blog-App-Rails.git
 ```
 
 ```
