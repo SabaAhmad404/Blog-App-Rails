@@ -1,0 +1,6 @@
+<%user=comment.user%>
+<% if user%>
+<p><%=user.Name%>:<%=comment.Text%></p>
+<%else%>
+<p>unknown:<%=comment.Text%></p>
+<%end%>

@@ -1,1 +1,10 @@
-<h1>here is the list of all posts created by users<h1>
+<%=render 'shared/user', user: user%>
+
+<% @posts.each do |posts| %>
+    <%= link_to post_path(user_id: @user.id, id: post.id) do %>
+   <%= render 'shared/post',post: post%>
+   <%end%>
+   <% post.most_recent_comment.each do |comment|%>
+       <%= render 'shared/comment', comment: comment%>
+       <%end%>
+<% end%>
