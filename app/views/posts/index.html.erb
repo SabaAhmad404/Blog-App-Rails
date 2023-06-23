@@ -1,4 +1,6 @@
+<div class="user-render">
 <%= render 'shared/user' , user: @users%>
+</div>
 <div class="post-index">
 <%@posts.each do |post|%>
   <a href="./<%= post.id%>">
