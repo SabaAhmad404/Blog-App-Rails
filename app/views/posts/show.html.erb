@@ -1,19 +1,19 @@
-<div class="container">
-   <div class="post-user">
-   <h1> post: <%=@post.id%>by <%=@user.Name%></h1>
-   <div class="lists">
-     <ul>
-     <li>coments: <%=@post.ComentsCounter || 0%></li>
-     <li>likes: <%=@post.LikesCounter || 0%></li>
-     </ul>
-   </div>
-    <p><%=@post.Text%></p>
-   </div>
-
-   <div class="comments-section">
-     <%@post.most_recent_comment.each do |comment|%>
-     <%= render 'shared/comment', comment: comment%>
-     <%end%>
+<div class="single-post">
+<div class="post-user">
+    <h1><%=@post.Title%>  by <%= @user.Name%></h1>
+       <ul>
+       <li>comments : <%=@post.ComentsCounter%></li>
+       <li> likes : <%=@post.LikesCounter%></li>
+       </ul>
+</div>
+<div class="text">
+<p><%= @post.Text%></p>
+</div>
+   <div class="post-comments">
+   
+   <%@post.recent_comments.each do |comment|%>
+      <%= render 'shared/comment', comment: comment%>
+   <%end%>
    </div>
 
 </div>

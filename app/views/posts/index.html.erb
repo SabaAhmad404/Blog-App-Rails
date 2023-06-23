@@ -1,10 +1,15 @@
-<%=render 'shared/user', user: user%>
-
-<% @posts.each do |posts| %>
-    <%= link_to post_path(user_id: @user.id, id: post.id) do %>
-   <%= render 'shared/post',post: post%>
-   <%end%>
-   <% post.most_recent_comment.each do |comment|%>
-       <%= render 'shared/comment', comment: comment%>
-       <%end%>
-<% end%>
+<%= render 'shared/user' , user: @users%>
+<div class="post-index">
+<%@posts.each do |post|%>
+  <a href="./<%= post.id%>">
+    <%=render 'shared/post' , post: post %>
+  </a>
+<div class="comments">
+  <%post.recent_comments.each do |comment| %>
+  <div class="comment-container">
+   <%=render 'shared/comment' , comment: comment%>
+  </div>
+  <%end%>
+</div>
+<%end%>
+</div>

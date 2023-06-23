@@ -1,15 +1,11 @@
-<div class="posts">
-  <div class="posts-container">
-  <div class="post-title">
-  <h1 class="POST"><%= post.Title %></h1>
-  <p><%= post.Text %></p>
-  <p>Number of comments: <%= post.ComentsCounter%></p>
-   <p>Number of likes: <%= post.LikesCounter%></p>
-  <div>
-
-  
-  
+<div class="posts-container">
+  <div class="post-name">
+  <h1><%= post.Title%><h1>
+  <p><%= post.Text%></p>
   </div>
-
+  <div class="coment-likes">
+  <p>comments: <%= post.ComentsCounter%></p>
+  <p>likes: <%= post.LikesCounter%></p>
+  </div>
 
 </div>

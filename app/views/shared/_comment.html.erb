@@ -1,6 +1,3 @@
-<%user=comment.user%>
-<% if user%>
-<p><%=user.Name%>:<%=comment.Text%></p>
-<%else%>
-<p>unknown:<%=comment.Text%></p>
-<%end%>
+<div class="conatiner-comment">
+ <p><%=comment.user.Name%> : <%= comment.Text%></p>
+</div>

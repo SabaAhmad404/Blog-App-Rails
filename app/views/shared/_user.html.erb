@@ -1,10 +1,10 @@
 <div class="user-container">
-<div class="photo">
- <img src=<%=user.Photo%> alt="user-photo">
-</div>
-<div class="user-name-counter">
- <h1><%=user.Name%></h1>
- <p>Number of posts: <%=user.PostsCounter%></p>
-</div>
+ <div class="user-image">
+    <img src="<%= user.Photo %>" alt="user-image">
+  </div>
 
+  <div class="user-name">
+   <h1><%= user.Name%></h1>
+   <p>Number of posts : <%= user.PostsCounter%></p>
+  </div>
 </div>

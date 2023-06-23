@@ -1,7 +1,5 @@
-<div class="user">
-    <% @users.each do |user| %>
-        <%= link_to user_path(user) do %>
-        <%= render 'shared/user', user: user %>
-        <% end%>
-     <% end %>
-</div>
+<%@users.each do |user|%>
+ <%= link_to user_path(user) do%>
+ <%= render 'shared/user', user: user%>
+ <%end%>
+<%end%>
