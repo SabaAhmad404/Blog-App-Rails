@@ -1,0 +1,28 @@
+<div class="single-post">
+<div class="post-show">
+    <h1><%=@post.Title%>  by <%= @user.Name%></h1>
+       <ul class="list">
+       <li>comments : <%=@post.ComentsCounter%></li>
+       <li> likes : <%=@post.LikesCounter%></li>
+       </ul>
+</div>
+<div class="text">
+<p><%= @post.Text%></p>
+  <div class="like-post">
+
+  <%=form_with model: @likes do |form|%>
+  <%=form.submit 'like post', class: "like_post"%>
+  <%end%>
+
+  
+  </div>
+
+</div>
+   <div class="post-comments">
+   
+   <%@post.recent_comments.each do |comment|%>
+      <%= render 'shared/comment', comment: comment%>
+   <%end%>
+   </div>
+
+</div>

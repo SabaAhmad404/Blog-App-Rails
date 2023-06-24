@@ -1,0 +1,17 @@
+<div class="user-render">
+<%= render 'shared/user' , user: @users%>
+</div>
+<div class="post-index">
+<%@posts.each do |post|%>
+  <a href="./<%= post.id%>">
+    <%=render 'shared/post' , post: post %>
+  </a>
+<div class="comments">
+  <%post.recent_comments.each do |comment| %>
+  <div class="comment-container">
+   <%=render 'shared/comment' , comment: comment%>
+  </div>
+  <%end%>
+</div>
+<%end%>
+</div>

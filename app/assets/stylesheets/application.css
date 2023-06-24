@@ -13,3 +13,48 @@
  *= require_tree .
  *= require_self
  */
+
+.user-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+
+.post-count {
+  display: flex;
+  padding-left: 3rem;
+}
+
+.user-render {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.coment-likes {
+  display: flex;
+  gap: 10px;
+  font-size: 15px;
+  padding-left: 5rem;
+}
+
+.post-show {
+  display: flex;
+  justify-content: space-around;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+}
+
+.text {
+  display: flex;
+  justify-content: center;
+}
+
+.post-comments {
+  display: flex;
+  justify-content: center;
+}

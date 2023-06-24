@@ -1,0 +1,9 @@
+<div class="new-post">
+<h1>Add new post</h1>
+<%= form_with model: @post do |form|%>
+<%=form.text_field :Title class: "form-title"%>
+<%=form.text_area :Text class: "text-area"%>
+<%=form.submit "submit" class: "submit"%>
+<%end%>
+
+</div>
