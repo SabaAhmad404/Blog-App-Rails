@@ -1,8 +1,8 @@
 class LikesCountroller < ApplicationController
-  #   def new
-  #     @like = Like.new
-  #     @post = Post.find(params[:post_id])
-  #   end
+  def new
+    @like = Like.new
+    @post = Post.find(params[:post_id])
+  end
 
   def create
     @user = current_user
