@@ -62,7 +62,7 @@ In order to run this project you need:
 - Mac or PC
 - Code Editor (Vs Code)
 - Terminal
-- Install [ruby](https://www.ruby-lang.org/en/documentation/installation/) on your computer
+- Install [ruby 3.2.2](https://www.ruby-lang.org/en/documentation/installation/) on your computer
 - Install [rails](https://www.tutorialspoint.com/ruby-on-rails/rails-installation.htm#) on your computer
 
 ### Setup
