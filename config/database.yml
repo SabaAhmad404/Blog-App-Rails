@@ -23,7 +23,7 @@ default: &default
 
 development:
   <<: *default
-  database: Blog_Post3_development
+  database: Blog_Post(saba)_development
   host: localhost
   port: 5432
   username: postgres
@@ -60,7 +60,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: Blog_Post3_test
+  database: Blog_Post(saba)_test
   host: localhost
   port: 5432
   username: postgres
@@ -87,6 +87,6 @@ test:
 #
 production:
   <<: *default
-  database: Blog_Post3_production
+  database: Blog_Post(saba)_production
   username: Blog_Post
   password: <%= ENV["BLOG_Post_DATABASE_PASSWORD"] %>
