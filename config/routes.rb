@@ -21,3 +21,5 @@ Rails.application.routes.draw do
   end
   post "users/:user_id/posts", to: "posts#create", as: :user_create_post
 end
+
+
