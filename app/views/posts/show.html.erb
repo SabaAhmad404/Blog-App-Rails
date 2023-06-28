@@ -1,0 +1,43 @@
+<main id="post-index" class="page">
+  <div id="user-page">
+    <%# Home button start %>
+    <div class="btn-container">
+      <%= link_to "Home", "../../../"  %>
+    </div>
+    <%# End fo Home button  %>
+    <div class="single-post-container">
+      <%# user post start %>
+      <article class="post-article">
+        <div class="info">
+          <div>
+            <h2 class="title"><%= @post.title %></h2>
+            <p class="user-name">by <%= @user.name %></p>
+          </div>
+          <p class="posts-counter">
+            Comment: <%= @post.comment_counter || 0 %>, Likes: <%= @post.likes_counter || 0 %>
+          </div>
+          <div class="post-body">
+            <p><%= @post.text %></p>
+          </div>
+        </article>
+        <%# End of user post %>
+        <div class="interaction">
+          <%= form_with(model: @like, url: user_post_likes_path(@user, @post), method: :post, remote: false) do |form| %>
+            <div class="add-coment-btn">
+              <%= form.submit "Like" %>
+            </div>
+          <% end %>
+          <div class="btn-container">
+            <%= link_to "Add comment", new_user_post_comment_path(@user, @post) %>
+          </div>
+        </div>
+        <%# Comments container start %>
+        
+        <ul class="comments-container">
+          <%= render_all_comment(@comments)%>
+        </ul>
+        <%# End of Comments container  %>
+      </div>
+    </div>
+  </main>
+  
